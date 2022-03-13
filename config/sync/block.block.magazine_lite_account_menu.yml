@@ -1,0 +1,36 @@
+uuid: bdec8257-059c-485e-85ab-9a96a98637e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - node
+    - system
+  theme:
+    - magazine_lite
+_core:
+  default_config_hash: itSHPYmGXnBVuW6FDLy148URrBNXTe0TRtnb-yeSDHI
+id: magazine_lite_account_menu
+theme: magazine_lite
+region: sidebar_second
+weight: -4
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      article: article
+      page: page
